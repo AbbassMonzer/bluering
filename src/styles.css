@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+
+
+/* - Angular Material styling */
+
+
+/* chip input field */
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+background-color: #f1f1f1;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple{
+  background-color: #f1f1f1;
+}
+
+.mat-chip-list-wrapper .mat-standard-chip {
+  font-size: smaller;
+}
+
+
+/* chips */
+.mat-standard-chip.mat-chip-with-trailing-icon {
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+  padding-right: 4px !important;
+  padding-left: 4px !important;
+}
+
+.mat-chip-list-wrapper input.mat-input-element,
+.mat-chip-list-wrapper .mat-standard-chip {
+  margin: 2px !important;
+}
+
+.mat-chip-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -9px !important;
+
+}
+
+.mat-chip.mat-standard-chip {
+  background-color: white !important;
+  color: #2199e8;
+}
+
+.mat-chip.mat-standard-chip .mat-chip-remove {
+  color: #2199e8;
+  opacity: 0.4;
+}
+
+.mat-chip.mat-standard-chip::after {
+  background: #0000;
+}
+

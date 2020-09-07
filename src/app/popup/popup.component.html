@@ -1,0 +1,98 @@
+<h1 class="title">Send Email</h1>
+
+<!-- filter input -->
+<input type="text" class="form-control filter" [(ngModel)]="userFilter.name" placeholder="filter by name">
+
+<!-- table -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"><span class="nameHeader">Name</span></th>
+      <th scope="col">Organization Unit</th>
+      <th scope="col">Job</th>
+      <th scope="col">Same O.U</th>
+      <th scope="col">Send As</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let data of dataSource |  filterBy: userFilter | paginate: config ; let i=index ">
+      <td> <input type="checkbox" id="name" aria-label="Checkbox for following text input">{{data.name}}</td>
+      <td>{{data.unit1}}</td>
+      <td>{{data.job}}</td>
+      <td>
+        <section class="example-section">
+          <mat-slide-toggle [color]="color" class="example-margin">
+          </mat-slide-toggle>
+        </section>
+      </td>
+      <td>
+        <select class="form-control">
+          <option *ngFor="let item of list" [value]="[i,item.name]">{{item.name}}</option>
+        </select>
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+<!-- pagination -->
+<div style="text-align: end;">
+  <pagination-controls (pageChange)="pageChanged($event)" [responsive]="responsive"></pagination-controls>
+</div>
+
+<!-- Send as(way to send emails) -->
+<div class="chips">
+  <mat-form-field class="example-chip-list" style="position: relative;">
+    <mat-chip-list #chipList aria-label="Fruit selection">
+      <span matPrefix class="sendAs">TO: &nbsp;</span>
+      <mat-chip class="chip" *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable"
+        (removed)="remove(fruit)">
+        <span style="margin-right: -5px;"> {{fruit.name}};</span>
+        <mat-icon class="mat-icon" matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+      <input [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+      <button mat-button matSuffix mat-stroked-button class="btn cc-bcc" (click)="toggle()"> <i class="fa fa-user"></i>
+        Cc & Bcc</button>  <!-- button toggle to show or hide other categories -->
+    </mat-chip-list>
+  </mat-form-field>
+
+
+
+<!-- hidden cc and bcc categories-->
+  <div *ngIf="show">
+    <mat-form-field class="example-chip-list" style="position: relative;">
+      <mat-chip-list #chipList aria-label="Fruit selection">
+        <span matPrefix class="sendAs">CC: &nbsp;</span>
+        <mat-chip class="chip" *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable"
+          (removed)="remove(fruit)">
+          <span style="margin-right: -5px;"> {{fruit.name}};</span>
+          <mat-icon class="mat-icon" matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+      </mat-chip-list>
+    </mat-form-field>
+
+
+    <mat-form-field class="example-chip-list" style="position: relative;">
+      <mat-chip-list #chipList aria-label="Fruit selection">
+        <span matPrefix class="sendAs">BCC: &nbsp;</span>
+        <mat-chip class="chip" *ngFor="let fruit of fruits" [selectable]="selectable" [removable]="removable"
+          (removed)="remove(fruit)">
+          <span style="margin-right: -5px;"> {{fruit.name}};</span>
+          <mat-icon class="mat-icon" matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+      </mat-chip-list>
+    </mat-form-field>
+  </div>
+
+</div>
+
+<!-- submit button to send the emails -->
+<button class="btn-confirm" mat-button mat-raised-button>Confirm</button>
+
+

@@ -1,0 +1,143 @@
+.title {
+  margin-top: -15px;
+}
+
+/* filter input styling */
+.filter {
+  width: 30%;
+  margin-bottom: 7px;
+}
+
+/* table styling */
+
+table {
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 5px;
+  text-align: left
+
+}
+
+.nameHeader {
+  margin-left: 1rem;
+}
+
+th {
+  font-weight: normal;
+  font-size: 15px;
+}
+
+tbody {
+  font-size: 12px;
+}
+
+select {
+  display: table-cell;
+  cursor: pointer;
+  width: 42%;
+  padding: 2px;
+  font-size: 14px;
+  height: 22px;
+}
+
+.email {
+  width: 82%;
+  height: 30px;
+}
+
+.icons {
+  margin-top: 5px;
+}
+
+.row {
+  justify-content: space-evenly;
+}
+
+.email-checkbox {
+  margin-top: 10px;
+  margin-left: -12px;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+#name {
+  position: relative;
+  margin-right: 11px;
+}
+
+.cc-bcc {
+  outline: none;
+  border-radius: 7px;
+  color: #2199e8;
+  border: none;
+}
+
+
+/* icons styling */
+
+.far {
+  padding-right: 22px;
+  cursor: pointer;
+}
+
+.fas {
+  color: #00c575;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.fa {
+  color: #2199e8;
+}
+
+
+
+/* submit(confirm) button styling */
+
+.btn-confirm {
+  background: #00c575;
+  border-radius: 20px;
+  color: white;
+  outline: none;
+  font-size: 13px;
+  margin-top: 1rem;
+  float: right;
+}
+
+/* chips styling(cc and bcc fields) */
+
+.sendAs {
+  color: gray;
+}
+
+.example-chip-list {
+  width: 100%;
+}
+
+.mat-icon {
+  display: none;
+}
+
+.chip:hover .mat-icon {
+  cursor: pointer;
+  display: block;
+}
+
+.chip:hover {
+  cursor: pointer;
+}
+
+.cc-bcc {
+  outline: none;
+  border-radius: 7px;
+  color: #2199e8;
+}

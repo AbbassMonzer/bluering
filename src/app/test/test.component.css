@@ -1,0 +1,22 @@
+.example-chip-list {
+  width: 100%;
+}
+
+.chip .mat-icon {
+  display: none;
+}
+.chip:hover .mat-icon {
+  display: block;
+  cursor: pointer;
+}
+
+.chip:hover {
+  cursor: pointer;
+}
+
+
+.cc-bcc{
+  outline: none;
+  border-radius: 7px;
+  color: #2199e8;
+}

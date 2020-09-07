@@ -1,0 +1,59 @@
+.table-active {
+  background: #f5f5f5;
+  color: #6e6e6e;
+  font-size: 15px;
+  border-bottom: none;
+}
+
+td{
+  border-right: 5px solid #EDEDED;
+}
+
+tbody{
+  border: 1px solid #E8E8E8;
+}
+
+tfoot{
+  background: #F8F8F8;
+}
+
+.fas {
+  cursor: pointer;
+  float: right;
+  color: #4d91e4;
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+  bottom: 25px;
+}
+
+.fa-ellipsis-h{
+  color: #6E6E6E;
+}
+
+
+.loan {
+  text-align: left;
+  font: normal normal normal 14px/16px Ubuntu;
+  letter-spacing: 0px;
+  color: #1b3454;
+  opacity: 1;
+}
+
+.interest {
+  text-align: left;
+  font: normal normal normal 11px/12px Ubuntu;
+  letter-spacing: 0px;
+  color: #6e6e6e;
+  opacity: 1;
+}
+
+.mat-badge-medium .mat-badge-content {
+  width: 7px !important;
+  height: 7px !important;
+}
+
+.mat-badge-medium.mat-badge-above .mat-badge-content {
+  top: -5px !important;
+  left: 7px !important;
+}

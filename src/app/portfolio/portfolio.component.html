@@ -1,0 +1,55 @@
+<table   class="table table-bordered">
+  <thead>
+    <tr>
+      <td scope="col" class="table-active">FACILITY</td>
+      <td scope="col" class="table-active">CURRENT LIMIT</td>
+      <td scope="col" class="table-active">UTLIZED BALANCE</td>
+      <td scope="col" class="table-active">PROPOSED LIMIT</td>
+      <td scope="col" class="table-active">CHANGE</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <ng-template #popContent let-greeting="greetings">
+        <ng-container *ngFor="let a of greeting"><div>{{a}}, <b>{{name}}</b>!</div></ng-container>
+    </ng-template>
+      <td><p class="loan">Medium & Long Term Loan</p><i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom"  [ngbPopover]="popContent"
+        triggers="manual" #p1="ngbPopover" (click)="toggleWithGreeting(p1, ['Bonjour','no'], 'French')">
+        </i>
+      <p class="interest">USD - 10.5% Interest</p></td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+      <td><i class="fas fa-ellipsis-h" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com"></i> <i class="fas fa-link" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com"></i></td>
+    </tr>
+
+    <tr>
+      <td><p class="loan">Medium & Long Term Loan</p><i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com">
+      </i> <p class="interest">USD - 10.5% Interest</p></td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>@fat</td>
+      <td><i class="fas fa-ellipsis-h" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com"></i></td>
+    </tr>
+    <tr>
+
+      <td><p class="loan">Credit Card Request</p> <i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com">
+      </i> <p class="interest">USD - 10.5% Interest</p></td>
+      <td>John</td>
+      <td>@twitter</td>
+      <td>@twitter</td>
+      <td><i class="fas fa-ellipsis-h" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com"></i></td>
+    </tr>
+
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td>Sum</td>
+      <td>$180</td>
+      <td>$180</td>
+      <td>$180</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
