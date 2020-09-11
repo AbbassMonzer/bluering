@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PopoverComponent } from '../popover/popover.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,7 +13,6 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
 
 
 }
