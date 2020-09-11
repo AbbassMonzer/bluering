@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
 import { FilterPipe } from 'ngx-filter-pipe';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
@@ -38,6 +38,8 @@ const ELEMENT_DATA: User[] = [
 })
 
 export class PopupComponent {
+
+
 
   visible = true;
   selectable = true;
@@ -82,6 +84,7 @@ export class PopupComponent {
 
     toggle() {
       this.show = !this.show;
+
   }
 
 

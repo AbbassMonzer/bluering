@@ -11,12 +11,14 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
 import {MaterialModule} from './material.module';
 import { PortfolioComponent } from './portfolio/portfolio.component'
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { PopoverComponent } from './popover/popover.component';
 @NgModule({
   declarations: [
     AppComponent,
     PopupComponent,
     TestComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    PopoverComponent
   ],
   imports: [
     BrowserModule,

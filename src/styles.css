@@ -65,3 +65,11 @@ background-color: #f1f1f1;
   background: #0000;
 }
 
+.mat-tab-header {
+  margin-bottom: 2rem !important;
+}
+
+.mat-tab-body-wrapper {
+  width: 90%;
+  margin: auto;
+}

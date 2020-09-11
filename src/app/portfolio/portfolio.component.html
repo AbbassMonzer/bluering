@@ -1,63 +1,204 @@
-<table   class="table table-bordered">
-  <thead>
-    <tr>
-      <td scope="col" class="table-active">FACILITY</td>
-      <td scope="col" class="table-active">CURRENT LIMIT</td>
-      <td scope="col" class="table-active">UTLIZED BALANCE</td>
-      <td scope="col" class="table-active">PROPOSED LIMIT</td>
-      <td scope="col" class="table-active">CHANGE</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <ng-template #popContent let-greeting="greetings">
-        <ng-container *ngFor="let a of greeting"><div>{{a}}, <b>{{name}}</b>!</div></ng-container>
-    </ng-template>
-      <td><p class="loan">Medium & Long Term Loan</p><i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom"  [ngbPopover]="popContent"
-        triggers="manual" #p1="ngbPopover" (click)="toggleWithGreeting(p1, ['Bonjour','no'], 'French')">
-        </i>
-      <p class="interest">USD - 10.5% Interest</p></td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td><i class="fas fa-ellipsis-h" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com"></i> <i class="fas fa-link" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com"></i></td>
-    </tr>
 
-    <tr>
-      <td><p class="loan">Medium & Long Term Loan</p><i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com">
-      </i> <p class="interest">USD - 10.5% Interest</p></td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>@fat</td>
-      <td><i class="fas fa-ellipsis-h" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com"></i></td>
-    </tr>
-    <tr>
+<mat-tab-group animationDuration="0ms" >
+  <mat-tab label="Facilities">
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td scope="col" class="table-active">FACILITY</td>
+        <td scope="col" class="table-active">CURRENT LIMIT</td>
+        <td scope="col" class="table-active">UTLIZED BALANCE</td>
+        <td scope="col" class="table-active">PROPOSED LIMIT</td>
+        <td scope="col" class="table-active">CHANGE</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p class="loan">Medium & Long Term Loan</p><i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" [ngbPopover]="popOver">
+          </i>
+        <p class="interest">USD - 10.5% Interest</p></td>
+        <td>Otto</td>
+        <td>20000</td>
+        <td>343000</td>
+        <td><i class="fas fa-ellipsis-h" placement="left" [ngbPopover]="popOver"></i> <i class="fas fa-link mr-3" placement="left" [ngbPopover]="popOver"></i></td>
+      </tr>
 
-      <td><p class="loan">Credit Card Request</p> <i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com">
-      </i> <p class="interest">USD - 10.5% Interest</p></td>
-      <td>John</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-      <td><i class="fas fa-ellipsis-h" placement="bottom" ngbPopover="This is simple example form ItSolutionStuff.com"></i></td>
-    </tr>
+      <tr>
+        <td><p class="loan">Medium & Long Term Loan</p><i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" [ngbPopover]="popOver">
+        </i> <p class="interest">USD - 10.5% Interest</p></td>
+        <td>Thornton</td>
+        <td>280000</td>
+        <td>20000</td>
+        <td><i class="fas fa-ellipsis-h" placement="left" [ngbPopover]="popOver"></i></td>
+      </tr>
+      <tr>
 
-  </tbody>
+        <td><p class="loan">Credit Card Request</p> <i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" [ngbPopover]="popOver">
+        </i> <p class="interest">USD - 10.5% Interest</p></td>
+        <td>John</td>
+        <td>122000</td>
+        <td>150900</td>
+        <td><i class="fas fa-ellipsis-h" placement="left" [ngbPopover]="popOver"></i></td>
+      </tr>
 
-  <tfoot>
-    <tr>
-      <td>Sum</td>
-      <td>$180</td>
-      <td>$180</td>
-      <td>$180</td>
-      <td></td>
-    </tr>
-    <tr style="position: fixed;">
-      <td>Sum</td>
-      <td>$180</td>
-      <td><i class="far fa-user-circle"></i></td>
-      <td><i class="fa fa-user"></i></td>
-      <td></td>
-    </tr>
-  </tfoot>
-</table>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td> <i class="fas fa-arrow-down"   data-toggle="collapse" href="#collapseExample"></i> TOTAL DIRECT</td>
+        <td>$180</td>
+        <td>$180</td>
+        <td>$180</td>
+        <td></td>
+      </tr>
+      <tr class="collapse" id="collapseExample">
+        <td>TOTAL INDIRECT</td>
+        <td>$180</td>
+        <td>$180</td>
+        <td>$180</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>TOTAL PSE</td>
+        <td>$180</td>
+        <td>$180</td>
+        <td>$180</td>
+        <td></td>
+      </tr>
+      <tr style="font-weight: bold;">
+        <td >Total</td>
+        <td>$180</td>
+        <td>$180</td>
+        <td>$180</td>
+        <td></td>
+      </tr>
+      <tr >
+        <td>TOTAL PSE</td>
+        <td>$180</td>
+        <td><i class="far fa-user-circle"></i></td>
+        <td><i class="fa fa-user"></i></td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+  </mat-tab>
+  <mat-tab label="Securities">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <td scope="col" class="table-active">FACILITY</td>
+          <td scope="col" class="table-active">CURRENT LIMIT</td>
+          <td scope="col" class="table-active">UTLIZED BALANCE</td>
+          <td scope="col" class="table-active">PROPOSED LIMIT</td>
+          <td scope="col" class="table-active">CHANGE</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p class="loan">Medium & Long Term Loan</p><i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" [ngbPopover]="popOver">
+            </i>
+          <p class="interest">USD - 10.5% Interest</p></td>
+          <td>Otto</td>
+          <td>20000</td>
+          <td>343000</td>
+          <td><i class="fas fa-ellipsis-h" placement="left" [ngbPopover]="popOver"></i> <i class="fas fa-link mr-3" placement="left" [ngbPopover]="popOver"></i></td>
+        </tr>
+
+        <tr>
+          <td><p class="loan">Medium & Long Term Loan</p><i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" [ngbPopover]="popOver">
+          </i> <p class="interest">USD - 10.5% Interest</p></td>
+          <td>Thornton</td>
+          <td>280000</td>
+          <td>20000</td>
+          <td><i class="fas fa-ellipsis-h" placement="left" [ngbPopover]="popOver"></i></td>
+        </tr>
+        <tr>
+
+          <td><p class="loan">Credit Card Request</p> <i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" [ngbPopover]="popOver">
+          </i> <p class="interest">USD - 10.5% Interest</p></td>
+          <td>John</td>
+          <td>122000</td>
+          <td>150900</td>
+          <td><i class="fas fa-ellipsis-h" placement="left" [ngbPopover]="popOver"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-tab>
+  <mat-tab label="Covenants">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <td scope="col" class="table-active">FACILITY</td>
+          <td scope="col" class="table-active">CURRENT LIMIT</td>
+          <td scope="col" class="table-active">UTLIZED BALANCE</td>
+          <td scope="col" class="table-active">PROPOSED LIMIT</td>
+          <td scope="col" class="table-active">CHANGE</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><p class="loan">Medium & Long Term Loan</p><i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" [ngbPopover]="popOver">
+            </i>
+          <p class="interest">USD - 10.5% Interest</p></td>
+          <td>Otto</td>
+          <td>20000</td>
+          <td>343000</td>
+          <td><i class="fas fa-ellipsis-h" placement="left" [ngbPopover]="popOver"></i> <i class="fas fa-link mr-3" placement="left" [ngbPopover]="popOver"></i></td>
+        </tr>
+
+        <tr>
+          <td><p class="loan">Medium & Long Term Loan</p><i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" [ngbPopover]="popOver">
+          </i> <p class="interest">USD - 10.5% Interest</p></td>
+          <td>Thornton</td>
+          <td>280000</td>
+          <td>20000</td>
+          <td><i class="fas fa-ellipsis-h" placement="left" [ngbPopover]="popOver"></i></td>
+        </tr>
+        <tr>
+
+          <td><p class="loan">Credit Card Request</p> <i  matBadge="&#8288;" matBadgeColor="warn" class="fas fa-bars" placement="bottom" [ngbPopover]="popOver">
+          </i> <p class="interest">USD - 10.5% Interest</p></td>
+          <td>John</td>
+          <td>122000</td>
+          <td>150900</td>
+          <td><i class="fas fa-ellipsis-h" placement="left" [ngbPopover]="popOver"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-tab>
+</mat-tab-group>
+
+
+<ng-template #popOver>
+  <app-popup>
+  </app-popup>
+</ng-template>
+
+
+
+
+
+<!-- <ng-template #popOver>
+  <table class="table table-borderless">
+    <tbody style="border: none;">
+      <tr>
+        <td><p>Economic Sector</p>
+           <p>Commercial contractor</p></td>
+        <td><p>Penalty rate</p>
+          <p style="color: #F76B00;">From 11.05% to 10.05%</p></td>
+      </tr>
+      <tr>
+        <td><p>Economic Sector</p>
+          <p>Commercial contractor</p></td>
+       <td><p>Penalty rate</p>
+         <p style="color: #F76B00;">From 11.05% to 10.05%</p></td>
+      </tr>
+      <tr>
+        <td><p>Economic Sector</p>
+          <p>Commercial contractor</p></td>
+       <td><p>Penalty rate</p>
+         <p style="color: #F76B00;">From 11.05% to 10.05%</p></td>
+      </tr>
+    </tbody>
+  </table>
+</ng-template> -->
 

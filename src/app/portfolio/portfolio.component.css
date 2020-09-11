@@ -1,9 +1,17 @@
+
 .table-active {
   background: #f5f5f5;
   color: #6e6e6e;
   font-size: 15px;
   border-bottom: none;
 }
+
+.fixed-row-bottom { position: fixed; bottom: 0;}
+
+.table-borderless tr td{
+ border-right: none;
+}
+
 
 td{
   border-right: 5px solid #EDEDED;
